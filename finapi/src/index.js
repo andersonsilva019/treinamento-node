@@ -50,4 +50,23 @@ app.get('/statement', verifyIfExitsAccountCPF, (request, response) => {
   return response.json(customer.statement)
 })
 
+app.post('/deposit', verifyIfExitsAccountCPF, (request, response) => {
+  const { customer } = request
+  const { description, amount } = request.body
+
+  if (amount <= 0) {
+    return response.status(400).json({ error: "Invalid deposit" })
+  }
+
+  const statementOperation = {
+    description,
+    amount,
+    created_at: new Date(),
+    type: 'credit'
+  }
+
+  customer.statement.push(statementOperation)
+
+  return response.status(201).send()
+})
 app.listen(3333)
