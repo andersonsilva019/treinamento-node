@@ -116,4 +116,18 @@ app.get('/statement/date', verifyIfExitsAccountCPF, (request, response) => {
   return response.json(statement)
 })
 
+app.put('/account', verifyIfExitsAccountCPF, (request, response) => {
+  const { name } = request.body
+  const { customer } = request
+
+  customer.name = name;
+
+  return response.status(201).send()
+})
+
+app.get('/user', verifyIfExitsAccountCPF, (request, response) => {
+  const { customer } = request
+  return response.json(customer)
+})
+
 app.listen(3333)
