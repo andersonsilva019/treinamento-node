@@ -1,9 +1,8 @@
-import { CategoriesRepository } from '../../repositories/implementations/CategoriesRepository';
+// import { CategoriesRepository } from '../../repositories/implementations/CategoriesRepository';
 import { ListCategoriesController } from './ListCategoriesController';
 import { ListCategoriesUseCase } from './ListCategoriesUseCase';
 
-// Singleton pattern
-const categoryRepository = CategoriesRepository.getInstance();
+const categoryRepository = null;
 
 const listCategoriesUseCase = new ListCategoriesUseCase(categoryRepository);
 
