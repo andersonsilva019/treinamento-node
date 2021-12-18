@@ -47,6 +47,7 @@ export class AuthenticationUserUseCase {
         isAdmin: user.isAdmin,
         created_at: user.created_at,
         driver_license: user.driver_license,
+        avatar: user.avatar,
       },
       token,
     };
