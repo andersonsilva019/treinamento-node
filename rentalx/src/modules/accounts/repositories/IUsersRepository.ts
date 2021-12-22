@@ -1,5 +1,6 @@
-import { ICreateUserDTO } from '../dtos/ICreateUserDTO';
-import { IUpdateUserAvatarDTO } from '../dtos/IUpdateUserAvatarDTO';
+import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
+import { IUpdateUserAvatarDTO } from '@modules/accounts/dtos/IUpdateUserAvatarDTO';
+
 import { User } from '../entities/User';
 
 export interface IUsersRepository {

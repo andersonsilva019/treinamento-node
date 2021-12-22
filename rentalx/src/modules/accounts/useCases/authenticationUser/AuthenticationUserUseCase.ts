@@ -2,10 +2,10 @@ import { compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 import { inject, injectable } from 'tsyringe';
 
-import { AppError } from '../../../../errors/AppError';
-import { IAuthenticationUserDTO } from '../../dtos/IAuthenticationUserDTO';
-import { User } from '../../entities/User';
-import { IUsersRepository } from '../../repositories/IUsersRepository';
+import { AppError } from '@errors/AppError';
+import { IAuthenticationUserDTO } from '@modules/accounts/dtos/IAuthenticationUserDTO';
+import { User } from '@modules/accounts/entities/User';
+import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
 
 interface IResponse {
   user: Omit<User, 'password'>;
