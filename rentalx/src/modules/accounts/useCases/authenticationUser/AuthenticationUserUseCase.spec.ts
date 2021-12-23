@@ -1,7 +1,7 @@
-import { AppError } from '@errors/AppError';
 import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
 import { UsersRepositoryFake } from '@modules/accounts/repositories/fakes/UsersRepositoryFake';
 import { CreateUserUseCase } from '@modules/accounts/useCases/createUser/CreateUserUseCase';
+import { AppError } from '@shared/errors/AppError';
 
 import { AuthenticationUserUseCase } from './AuthenticationUserUseCase';
 

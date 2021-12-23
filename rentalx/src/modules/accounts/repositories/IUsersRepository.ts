@@ -1,7 +1,7 @@
 import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
 import { IUpdateUserAvatarDTO } from '@modules/accounts/dtos/IUpdateUserAvatarDTO';
 
-import { User } from '../entities/User';
+import { User } from '../infra/typeorm/entities/User';
 
 export interface IUsersRepository {
   update(data: IUpdateUserAvatarDTO): Promise<void>;
