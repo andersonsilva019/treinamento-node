@@ -5,10 +5,10 @@ import { Car } from '@modules/cars/infra/typeorm/entities/Car';
 import { ICarRepository } from '@modules/cars/repositories/ICarRepository';
 import { AppError } from '@shared/errors/AppError';
 
-// @injectable()
+@injectable()
 export class CreateCarUseCase {
   constructor(
-    // @inject('CarsRepository')
+    @inject('CarsRepository')
     private carsRepository: ICarRepository
   ) {}
 
