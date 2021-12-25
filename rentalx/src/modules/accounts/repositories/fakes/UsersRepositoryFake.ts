@@ -1,6 +1,7 @@
-import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
-import { IUpdateUserAvatarDTO } from '../../dtos/IUpdateUserAvatarDTO';
-import { User } from '../../infra/typeorm/entities/User';
+import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
+import { IUpdateUserAvatarDTO } from '@modules/accounts/dtos/IUpdateUserAvatarDTO';
+import { User } from '@modules/accounts/infra/typeorm/entities/User';
+
 import { IUsersRepository } from '../IUsersRepository';
 
 export class UsersRepositoryFake implements IUsersRepository {
